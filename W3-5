@@ -1,0 +1,67 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+	int a, b, c, d, e;
+	cout << "enter" << endl;
+	cin >> a >> b >> c >> d >> e;
+	int positivesum=0, negativesum=0,negnum=0,posnum=0;
+	if (a >= 0)
+	{
+		positivesum = positivesum + a;
+		posnum++;
+	}
+	else
+	{
+		negnum++;
+		negativesum = negativesum + a;
+	}
+	if (b >= 0)
+	{
+		positivesum = positivesum + b;
+		posnum++;
+	}
+	else
+	{
+		negnum++;
+		negativesum = negativesum + b;
+	}
+	if (c >= 0)
+	{
+		positivesum = positivesum + c;
+		posnum++;
+	}
+	else
+	{
+		negnum++;
+		negativesum = negativesum + c;
+	}
+	if (d >= 0)
+	{
+		positivesum = positivesum + d;
+		posnum++;
+	}
+	else
+	{
+		negnum++;
+		negativesum = negativesum + d;
+	}
+	if (e >= 0)
+	{
+		positivesum = positivesum + e;
+		posnum++;
+	}
+	else
+	{
+		negnum++;
+		negativesum = negativesum + e;
+	}
+	double posaverage = static_cast<double>(positivesum) / posnum;
+	double negaverage = static_cast<double>(negativesum) / negnum;
+	cout << " the positive sum equals " << positivesum << " the negative sum equals " << negativesum << " the positive average equals " << posaverage << " the negative average equals " << negaverage << endl;
+	
+	system("Pause");
+	return 0;
+}
