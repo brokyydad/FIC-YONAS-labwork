@@ -1,0 +1,25 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+	int y1, m1, d1, y2, m2, d2;
+	cout << "enter the birth date of child 1 in the order of yyyy mm dd" << endl;
+	cin >> y1 >> m1 >> d1;
+	cout << "enter the birth date of child 2 in the order of yyyy mm dd" << endl;
+	cin >> y2 >> m2 >> d2;
+	int temp1 = y1 * 360 + m1 * 30 + d2;
+	int temp2 = y2 * 360 + m2 * 30 + d2;
+	int delta = temp1 - temp2;//if you want positive answers check last code 
+	cout << "there are " << delta << "days between the birthday of those 2 kids" << endl;
+	delta = abs(delta);
+	int year, month, day;
+	year = delta / 360;
+	month = (delta - 360 * year) / 30;
+	day = delta - 360 * year - 30 * month;
+	cout << year << " of years " << month << " of months " << day << " of days between 2 children" << endl;
+
+	system("Pause");
+	return 0;
+}
