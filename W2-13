@@ -1,0 +1,18 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+int main()
+{
+	double principalAmount, interestRate;
+	int years;
+	double total;
+	cout << "enter the principalAmount, interestRate and years" << endl;
+	cin >> principalAmount >> interestRate >> years;
+	total = principalAmount * (1 + interestRate * years);
+	cout << "total is " << total;
+
+	
+	system("Pause");
+	return 0;
+}
