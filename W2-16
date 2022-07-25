@@ -1,0 +1,19 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+	int year1, year2;
+	cout << "enter the years" << endl;
+	cin >> year1 >> year2;
+	int deltadays;
+	deltadays = (year1 - year2) * 360;
+	if (deltadays < 0)//in case you want the positive output
+		deltadays = deltadays * (-1);
+	cout << "There are " << deltadays << endl;
+
+
+	system("Pause");
+	return 0;
+}
