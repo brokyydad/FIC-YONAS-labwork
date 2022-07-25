@@ -1,0 +1,26 @@
+#include<iostream>
+#include<ctime>
+
+using namespace std;
+
+int main()
+{
+	srand(time(0));
+
+	int x, y;
+	cout << "Enter x and y" << endl;
+	cin >> x >> y;
+
+	if (x >= y)
+	{
+		int temp;
+		temp = x;
+		x = y;
+		y = temp;
+	}
+	int a = rand() % (y - x + 1) + x;
+	cout << a;
+
+	system("Pause");
+	return 0;
+}
