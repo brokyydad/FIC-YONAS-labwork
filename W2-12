@@ -1,0 +1,16 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+int main()
+{
+	double a,b,c;
+	cout << "enter the coefficient of the function" << endl;
+	cin >> a >> b >> c;
+	double discriminant;
+	discriminant =b * b - 4 * a * c;
+	cout << "the discriminant is " << discriminant << endl;
+	
+	system("Pause");
+	return 0;
+}
