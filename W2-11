@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	double height, base;
+	cout << "enter the height and the base of the triangle" << endl;
+	cin >> height >> base;
+	double area;
+	area = 0.5 * height * base;
+	cout << "the area of the triangle is " << area << endl;
+	
+	system("Pause");
+	return 0;
+}
