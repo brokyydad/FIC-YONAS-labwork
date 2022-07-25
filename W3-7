@@ -1,0 +1,17 @@
+#include<iostream>
+#include<ctime>
+
+using namespace std;
+
+int main()
+{
+	
+	
+	srand(time(0));
+
+	double a = static_cast<double>(rand()) / RAND_MAX * 3.0 +1;
+	cout << a;
+
+	system("Pause");
+	return 0;
+}
