@@ -1,0 +1,22 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+	char a;
+	cout << "enter your stuff " << endl;
+	cin >> a;
+	if (a >= '0' && a <= '9')
+		cout << "The character you entered is a digit" << endl;
+	else if (a >= 'a' && a <= 'z')
+		cout << "The character you entered is a lower case" << endl;
+	else if (a >= 'A' && a <= 'Z')
+		cout << "The character you entered is an upper case" << endl;
+	else
+		cout << "The character you entered is neither an English alphabet nor a digit." << endl;
+
+
+	system("Pause");
+	return 0;
+}
