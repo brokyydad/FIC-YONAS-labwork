@@ -1,0 +1,21 @@
+#include<iostream>
+#include<cmath>
+#include<ctime>
+
+using namespace std;
+
+int main()
+{
+	srand(time(0));
+
+	int day1, day2;
+	int delta;
+	day1 = rand() % 30 + 1;
+	day2 = rand() % 30 + 1;
+	delta = day1 - day2;
+	cout << "There are " << delta << " days between day " << day1 << " and " << day2 << endl;
+
+
+	system("Pause");
+	return 0;
+}
