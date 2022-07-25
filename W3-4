@@ -1,0 +1,38 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+	int hours, dependents;
+	double gross, withhold, net;
+	cout << "type in the hours and dependents " << endl;
+	cin >> hours >> dependents;
+	if (hours >= 40)
+	{
+		gross = 16.78 * 40 + (hours - 40) * 16.78 * 1.5;
+		cout << "the grosspay of the worker is " << gross << endl;
+	}
+	else
+	{
+		gross = 16.78 * hours;
+		cout << "the grosspay of the worker is " << gross << endl;
+	}
+	
+	if (dependents >= 3)
+	{
+		withhold = gross * 0.25 + 10 + 35;
+		cout << "the withholding amount is " << withhold << endl;
+	}
+	else
+	{
+		withhold = gross * 0.25 + 10;
+		cout << "the withholding amount is " << withhold << endl;
+	}
+	net = gross - withhold;
+	cout << "the net take - home pay for the week is " << net << endl;
+
+
+	system("Pause");
+	return 0;
+}
