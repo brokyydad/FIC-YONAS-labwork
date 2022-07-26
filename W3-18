@@ -1,0 +1,26 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+	double x1, y1, x2, y2, x3, y3;
+	cout << "enter " << endl;
+	cin>> x1>> y1>> x2>> y2>>x3>>y3;
+	double d12,d23,d13;
+	d12 = sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
+	d13 = sqrt((x1 - x3) * (x1 - x3) + (y1 - y3) * (y1 - y3));
+	d23 = sqrt((x2 - x3) * (x2 - x3) + (y2 - y3) * (y2 - y3));
+	while (d12 + d23 <= d13 || d12 + d13 <= d23 || d23 + d13 <= d12)
+	{
+		cout << "fuck offf" << endl;
+		cout << "enter " << endl;
+		cin >> x1 >> y1 >> x2 >> y2 >> x3 >> y3;
+	}
+	double s = (d12 + d23 + d13) * 0.5;
+	double area = sqrt(s * (s - d12) * (s - d23) * (s - d13));
+	cout << "the area of the triangle is " << area << endl;
+
+	system("Pause");
+	return 0;
+}
