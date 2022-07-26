@@ -1,0 +1,24 @@
+#include<iostream>
+#include<ctime>
+
+using namespace std;
+
+int main()
+{
+	srand(time(0));
+	int a = rand() % 27 + 0;
+	char alpha = 'A' + a;
+	char output;
+	if (a >= 16)
+	{
+		output = alpha + 10 - 26;
+	}
+	else
+		output = alpha + 10;
+	
+	cout << alpha << endl;
+	cout << output << endl;
+
+	system("Pause");
+	return 0;
+}
