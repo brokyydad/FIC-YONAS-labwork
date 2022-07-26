@@ -1,0 +1,48 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+	double a, b, c;
+	cout << "enter 3 double type numbers" << endl;
+	cin >> a >> b >> c;
+	double largest=a, smallest=a;
+	if (largest < b)
+	{
+		largest = b;
+		if (largest < c)
+		{
+			largest = c;
+		}
+	}
+	if (largest < c)
+	{
+		largest = c;
+		if (largest < b)
+		{
+			largest = b;
+		}
+	}
+	cout << "the largest is " << largest << endl;
+	if (smallest > b)
+	{
+		smallest = b;
+		if (smallest > c)
+		{
+			smallest = c;
+		}
+	}
+	if (smallest > c)
+	{
+		smallest = c;
+		if (smallest > b)
+		{
+			smallest = b;
+		}
+	}
+	cout << "the smallest is " <<smallest << endl;
+
+	system("Pause");
+	return 0;
+}
