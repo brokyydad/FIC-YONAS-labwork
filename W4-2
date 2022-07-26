@@ -1,0 +1,22 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+	int index = 0;
+	int output = 0;
+	while (index < 10)
+	{
+		int temp;
+		cout << "enter a number " << endl;
+		cin >> temp;
+		output = output + temp;
+		index++;
+	}
+	double average = output / static_cast<double>(10);
+	cout << average << endl;
+
+	system("Pause");
+	return 0;
+}
