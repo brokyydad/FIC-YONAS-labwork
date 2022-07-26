@@ -1,0 +1,35 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+	int index = 0;
+	int posindex = 0;
+	int negindex = 0;
+	int pos = 0;
+	int neg = 0;
+	while (index < 10)
+	{
+		int temp;
+		cout << "enter a number " << endl;
+		cin >> temp;
+		if (temp < 0)
+		{
+			negindex++;
+			neg = neg + temp;
+		}
+		else
+		{
+			posindex++;
+			pos = pos + temp;
+		}
+		
+		index++;
+	}
+	double average = (pos+neg) / static_cast<double>(10);
+	cout << average << endl;
+
+	system("Pause");
+	return 0;
+}
