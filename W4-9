@@ -1,0 +1,32 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+	int n;
+	cout << "enter n" << endl;
+	cin >> n;
+	while (n < 0)
+	{
+		cout << "mf enter the right n" << endl;
+		cin >> n;
+	}
+	int temp;
+	cout << "enter your number" << endl;
+	cin >> temp;
+	int largest = temp;
+	int index = 1;
+	while (index < n)
+	{
+		cout << "enter your number" << endl;
+		cin >> temp;
+		if (temp >= largest)
+			largest = temp;
+		index++;
+	}
+	cout << largest;
+
+	system("Pause");
+	return 0;
+}
