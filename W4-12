@@ -1,0 +1,38 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+int main()
+{
+	int n;
+	cout << "enter n" << endl;
+	cin >> n;
+	while (n < 0)
+	{
+		cout << "mf enter the right n" << endl;
+		cin >> n;
+	}
+	
+	int index = 1;
+	double addition;
+	double result = 0;
+	while (index < n + 1)
+	{
+		if (index % 2 == 1)
+		{
+			addition = static_cast<double>(1) / index;
+			result = result + addition;
+		}
+		else
+		{
+			addition = static_cast<double>(1) / index;
+			result = result - addition;
+		}
+		index++;
+	}
+	cout << result;
+
+
+	system("Pause");
+	return 0;
+}
