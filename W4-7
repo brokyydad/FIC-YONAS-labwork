@@ -1,0 +1,50 @@
+#include<iostream>
+
+using namespace std;
+
+int main()//watch for index=0
+{
+	int n;
+	cout << "enter n" << endl;
+	cin >> n;
+	while (n < 0)
+	{
+		cout << "mf enter the right n" << endl;
+		cin >> n;
+	}
+	
+	int index = 0;
+	int oddindex = 0;
+	int evenindex = 0;
+	int odd = 0;
+	int even = 0;
+	while (index < n)
+	{
+		int temp;
+		index++;
+		cout << "enter a fucking number dont be fucking negative " << endl;
+		cin >> temp;
+		if (temp >= 0)
+		{
+			if (temp % 2 == 0)
+			{
+				evenindex++;
+				even = even + temp;
+			}
+			else
+			{
+				oddindex++;
+				odd = odd + temp;
+			}
+		}
+		else
+			index--;
+	}
+	double evenaverage = static_cast<double>(even) / evenindex, oddaverage = static_cast<double>(odd) / oddindex;
+	cout << "sum of even numbers is " << even << " the average of them is " << evenaverage << " the sum of odd numbers is " << odd << " the average of them is " << oddaverage << endl;
+	cout << "the sum of all the numbers except negative is " << even + odd << " the average of them is " << static_cast<double>(even + odd) / index << endl;
+
+
+	system("Pause");
+	return 0;
+}
