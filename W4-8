@@ -1,0 +1,29 @@
+#include<iostream>
+
+using namespace std;
+
+int main()//watch for index=0
+{
+	int n;
+	cout << "enter n" << endl;
+	cin >> n;
+	while (n < 0)
+	{
+		cout << "mf enter the right n" << endl;
+		cin >> n;
+	}
+	int multiplier = 1;
+	int result = 1;
+	int index = 0;
+	while (index < n)
+	{
+		result = result * multiplier;
+		multiplier++;
+		index++;
+	}
+	cout << result;
+	
+
+	system("Pause");
+	return 0;
+}
