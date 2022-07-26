@@ -1,0 +1,28 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+	double size_smaller, size_larger, price_smaller, price_larger;
+	cout << "enter the numbers for small pizza" << endl;
+	cin >> size_smaller >> price_smaller;
+	cout << "enter the numbers for large pizza" << endl;
+	cin >> size_larger >> price_larger;
+	float area_smaller, area_larger;
+	area_smaller = 0.25 * size_smaller * size_smaller * 3.14;
+	area_larger = 0.25 * size_larger * size_larger * 3.14;
+	double temps, templ;
+	temps = price_smaller / area_smaller;
+	templ = price_larger / area_larger;
+	if (temps < templ)
+		cout << "small pizza is best to buy" << endl;
+	else if (temps = templ)
+		cout << "they're the same" << endl;
+	else
+		cout << "large one is best to buy" << endl;
+
+
+	system("Pause");
+	return 0;
+}
