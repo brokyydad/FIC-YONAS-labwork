@@ -1,0 +1,34 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+	double cash;
+	int year;
+	double total;
+	cout << "enter cash and year" << endl;
+	cin >> cash >> year;
+	while (cash < 0 || year < 0)
+	{
+		cout << "Fuck off dumb ass" << endl;
+	}
+	if (cash >= 0 && cash < 1000)
+	{
+		total = cash * (1 + 0.025 * year);
+	}
+	else if (cash >= 1000 && cash < 10000)
+	{
+		total = 1000 * 0.025 + (cash - 1000) * 0.02;
+	}
+	else if (cash >= 10000 && cash < 100000)
+	{
+		total = 1000 * 0.025 + 9000 * 0.02 + (cash - 10000) * 0.015;
+	}
+	else
+		total = 1000 * 0.025 + 9000 * 0.02 + 90000 * 0.015 + (cash - 100000) * 0.01;
+	cout << total << endl;
+
+	system("Pause");
+	return 0;
+}
