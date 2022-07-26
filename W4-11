@@ -1,0 +1,37 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+int main()
+{
+	int n;
+	cout << "enter n" << endl;
+	cin >> n;
+	while (n < 0)
+	{
+		cout << "mf enter the right n" << endl;
+		cin >> n;
+	}
+	int temp;
+	int output;
+	cout << "enter your number" << endl;
+	cin >> temp;
+	int largest = abs(temp);
+	int index = 1;
+	output = temp;
+	while (index < n)
+	{
+		cout << "enter your number" << endl;
+		cin >> temp;
+		if (abs(temp) >= largest)
+		{
+			largest = abs(temp);
+			output = temp;
+		}
+		index++;
+	}
+	cout << output;
+
+	system("Pause");
+	return 0;
+}
