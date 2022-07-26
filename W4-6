@@ -1,0 +1,24 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+	int days;
+	cout << "how many days? " << endl;
+	cin >> days;
+	int solved = 0;
+	int able = 2;
+	int n = 0;
+	while (n < days)
+	{
+		solved = solved + able;
+		able++;
+		able++;
+		n++;
+	}
+	cout << solved;
+
+	system("Pause");
+	return 0;
+}
