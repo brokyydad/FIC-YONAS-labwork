@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int index = 2;
+	int a = 1;
+	int b = 1;
+	int c;
+	while (index < 20)
+	{
+		c = a + b;
+		a = b;
+		b = c;
+
+		index++;
+	}
+	cout << c;
+
+	system("pause");
+	return 0;
+}
