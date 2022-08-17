@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int n;
+	int index = 0;
+	int temp;
+	cout << "enter n intergers " << endl;
+	cin >> n;
+	cin >> temp;
+	int min = temp;
+	while (index < n - 1)
+	{
+		cin >> temp;
+		index++;
+		if (temp <= min)
+			min = temp;
+	}
+	cout << min;
+
+	system("pause");
+	return 0;
+}
