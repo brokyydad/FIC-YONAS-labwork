@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+
+bool isDigit(char n)
+{
+	if (n >= '0' && n <= '9')
+		return true;
+	else
+		return false;
+
+}
+
+int main()
+{
+	cout << "enter a number" << endl;
+	char input;
+	cin >> input;
+	int a = isDigit(input);
+	cout << a << endl;
+	system("pause");
+	return 0;
+}
