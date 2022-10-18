@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+
+int successiveSum(int n)
+{
+	int a = 1;
+	int sum = 0;
+	while (a <= n)
+	{
+		sum = sum + a;
+		a++;
+	}
+	return sum;
+}
+
+int main()
+{
+	cout << "enter a number" << endl;
+	int input;
+	cin >> input;
+	int a = successiveSum(input);
+	cout << a << endl;
+	system("pause");
+	return 0;\
+}
