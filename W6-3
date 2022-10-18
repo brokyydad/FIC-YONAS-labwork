@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+
+int successiveProduct(int n)
+{
+	int a = 1;
+	int product = 1;
+	while (a <= n)
+	{
+		product = product * a;
+		a++;
+	}
+	return product;
+}
+
+int main()
+{
+	cout << "enter a number" << endl;
+	int input;
+	cin >> input;
+	int a = successiveProduct(input);
+	cout << a << endl;
+	system("pause");
+	return 0;
+}
