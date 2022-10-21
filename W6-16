@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+
+char upperCase(char a)
+{
+	if (a + 10 <= 'Z')
+		return a + 10;
+	else
+		return a - 16;
+}
+
+int main()
+{
+	cout << upperCase('Z') << endl;
+	system("pause");
+	return 0;
+}
