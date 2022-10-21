@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+
+int quadraticTester(float a, float b, float c)
+{
+	if (b * b - 4 * a * c == 0)
+		return 1;
+	else if (b * b - 4 * a * c > 0)
+		return 2;
+	else
+		return 0;
+}
+int main()
+{
+	cout << "enter a b c" << endl;
+	float a, b, c;
+	cin >> a >> b >> c;
+	int result = quadraticTester(a, b, c);
+	cout << result << endl;
+
+	system("pause");
+	return 0;
+}
