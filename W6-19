@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+
+float accruedTotal(float p, float t)
+{
+	float total;
+	if (p >= 0 && p < 1000)
+	{
+		total = p * (1 + 0.025 * t);
+	}
+	else if (p >= 1000 && p < 10000)
+	{
+		total = 1000 * (1 + 0.025 * t) + (p - 1000) * (1 + 0.02 * t);
+	}
+	else if (p >= 10000 && p < 100000)
+	{
+		total = 1000 * (1 + 0.025 * t) + 9000 * (1 + 0.02 * t)+(p-10000)*(1+0.015*t);
+	}
+	else
+	{
+		total = 1000 * (1 + 0.025 * t) + 9000 * (1 + 0.02 * t) + 100000 * (1 + 0.015 * t) + (p - 100000) * (1 + 0.01 * t);
+	}
+	return total;
+}
+
+
+
+
+int main()
+{
+	float p, t;
+	cout << "Enter principal and time period: ";
+	cin >> p >> t;
+	float total = accruedTotal(p, t);
+	cout << "The accrued total amount is "<<total << endl;
+	system("Pause");
+	return 0;
+}
