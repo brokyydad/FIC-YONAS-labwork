@@ -1,0 +1,34 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+//Area = Square root of√s(s - a)(s - b)(s - c) where s is half the perimeter, or (a + b + c)/2
+double vectorLength(float x1, float y1, float x2, float y2)
+{
+	double result = sqrt(x1 * x1 - 2 * x1 * x2 + x2 * x2 + y1 * y1 - 2 * y1 * y2 + y2 * y2);
+	return result;
+}
+double areaOfTriangle(float x1, float y1, float x2, float y2, float x3, float y3)
+{
+	double length1 = vectorLength(x1, y1, x2, y2);
+	double length2 = vectorLength(x1, y1, x3, y3);
+	double length3 = vectorLength(x3, y3, x2, y2);
+	double s = (length1 + length2 + length3) / 2;
+	double size = sqrt(s * (s - length1) * (s - length2) * (s - length3));
+	return size;
+}
+int main()
+{
+	int x1 = 1;
+	int x2 = 3;
+	int y1 = 1;
+	int y2 = 3;
+	int x3 = 0;
+	int y3 = 3;
+
+	double result = areaOfTriangle(x1, y1, x2, y2, x3, y3);
+	cout << result << endl;
+
+	system("pause");
+	return 0;
+
+}
