@@ -15,7 +15,8 @@ int main()
 		if (arr[i] % 2 == 0)
 			index++;
 	}
-	cout <<endl<< index;
+	cout <<endl<< index;//even
+	cout << endl << 10 - index << endl;//odd
 	system("pause");
 	return 0;
 
