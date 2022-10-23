@@ -1,0 +1,14 @@
+#include<iostream>
+
+using namespace std;
+
+int countElements(int arr[], int size, int target)
+{
+	int index = 0;
+	for (int i = 0; i < size; i++)
+	{
+		if (arr[i] == target)
+			index++;
+	}
+	return index;
+}
