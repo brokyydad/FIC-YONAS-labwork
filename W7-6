@@ -1,0 +1,26 @@
+#include<iostream>
+#include<ctime>
+using namespace std;
+int primeCounter(int arr[], int size)
+{
+	int index = 0;
+	for (int i = 0; i < size; i++)
+	{
+		if (isPrime(arr[i]))
+			index++;
+	}
+	return index;
+}
+bool isPrime(int n)
+{
+    // Corner case
+    if (n <= 1)
+        return false;
+
+    // Check from 2 to n-1
+    for (int i = 2; i < n; i++)
+        if (n % i == 0)
+            return false;
+
+    return true;
+}
