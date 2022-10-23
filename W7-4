@@ -1,0 +1,30 @@
+#include<iostream>
+#include<ctime>
+using namespace std;
+bool ispositive(float n)
+{
+	if (n < 0)
+		return false;
+	else
+		return true;
+}
+int main()
+{
+	srand(time(0));
+
+	int arr[10];
+	int index = 0;
+	for (int i = 0; i < 10; i++)
+	{
+		double random = -1 + static_cast <float> (rand()) / (static_cast <float> (RAND_MAX / (2)));
+		cout << random << " ";
+		if (ispositive(random))
+			index++;
+	}
+	cout <<endl<< "positive " << index;
+	cout << endl << "negative" << 10 - index << endl; 
+	
+	system("pause");
+	return 0;
+
+}
